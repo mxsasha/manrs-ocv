@@ -27,7 +27,7 @@ jobs:
          run: python3 -mpip install -r requirements.txt
 
        - name: Run
-         run: ocv/run.py ocv/test_data/snap | tee actual_output.txt 2>&1
+         run: ocv/run.py ocv/test_data/snap 2>&1 | tee actual_output.txt
 
        - name: Check output
          run: diff ocv/test_data/expected_output.txt actual_output.txt

@@ -6,7 +6,6 @@
 .pytest_cache
 .vscode
 configs
-snap/configs
 
 syntax: glob
 __pycache__

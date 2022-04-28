@@ -5,7 +5,7 @@
 .tmpdirs
 .pytest_cache
 .vscode
-configs
 
 syntax: glob
 __pycache__
+configs

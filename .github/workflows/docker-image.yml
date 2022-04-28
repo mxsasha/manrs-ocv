@@ -27,7 +27,7 @@ jobs:
          run: python3 -mpip install -r requirements.txt
 
        - name: Run
-         run: manrs-ocv/run.py
+         run: ocv/run.py
 
   build-and-push-image:
     needs: test

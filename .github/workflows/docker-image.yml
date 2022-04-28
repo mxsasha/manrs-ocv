@@ -21,7 +21,7 @@ jobs:
          run: docker pull batfish/allinone
 
        - name: Start batfish
-         run: docker run --name batfish -v batfish-data:/data -p 8888:8888 -p 9997:9997 -p 9996:9996 batfish/allinone
+         run: docker run -d --name batfish -v batfish-data:/data -p 8888:8888 -p 9997:9997 -p 9996:9996 batfish/allinone
 
        - name: Install dependencies
          run: python3 -mpip install -r requirements.txt
@@ -30,6 +30,7 @@ jobs:
          run: manrs-ocv/run.py
 
   build-and-push-image:
+    needs: test
     runs-on: ubuntu-latest
     permissions:
       contents: read
